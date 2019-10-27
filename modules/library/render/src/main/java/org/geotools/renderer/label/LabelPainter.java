@@ -428,6 +428,11 @@ public class LabelPainter {
         if (width <= 0 || height <= 0) {
             return null;
         }
+        
+        double roundedWidth = Math.round(width);
+        double roundedHeight = Math.round(height);
+	    width = roundedWidth != 0 ? roundedWidth : Math.ceil(width);
+	    height = roundedHeight != 0 ? roundedHeight : Math.ceil(height);
 
         if (graphic instanceof MarkStyle2D) {
             MarkStyle2D mark = (MarkStyle2D) graphic;
