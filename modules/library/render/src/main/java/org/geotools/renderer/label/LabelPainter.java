@@ -422,15 +422,15 @@ public class LabelPainter {
             height += margin[0] + margin[2];
         }
 		
-		// just in case someone specified negative margins for some reason
+	// just in case someone specified negative margins for some reason
         if (width <= 0 || height <= 0) {
             return null;
         }
         
-		double roundedWidth = Math.round(width);
- 	    double roundedHeight = Math.round(height);
-	    width = roundedWidth != 0 ? roundedWidth : Math.ceil(width);
-	    height = roundedHeight != 0 ? roundedHeight : Math.ceil(height);
+	double roundedWidth = Math.round(width);
+ 	double roundedHeight = Math.round(height);
+	width = roundedWidth != 0 ? roundedWidth : Math.ceil(width);
+	height = roundedHeight != 0 ? roundedHeight : Math.ceil(height);
 
         if (graphic instanceof MarkStyle2D) {
             MarkStyle2D mark = (MarkStyle2D) graphic;
